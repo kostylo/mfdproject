@@ -1,23 +1,42 @@
+section:first-of-type {
+    color:#ff0000;
+    height: 22em;
+    margin-bottom: 2em;
+}
+
+section:nth-of-type(2) {
+    color:#ff0000;
+    height: 13em;
+    margin-bottom: 3em;
+}
+
 .selected {
     background-color: #CFD8DC !important;
     color: white;
 }
 .products {
-    margin: 0 0 2em 0;
     list-style-type: none;
+    width: 960px;
+    margin: 0 auto;
     padding: 0;
-    width: 15em;
+    display: flex;
 }
+
+
 .products li {
+    margin: 5px;
+    height: 10em;
     cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    height: 1.6em;
-    border-radius: 4px;
+    display: inline;
+    flex: 1 1 0px;
+    border: 1px solid #ff0000;
+
 }
+
+.products:nth-of-type(2) {
+    margin-bottom: 3em;
+}
+
 .products li.selected:hover {
     background-color: #BBD8DC !important;
     color: white;

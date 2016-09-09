@@ -7,6 +7,7 @@ import { CampaignsComponent } from "./ts/campaigns.component";
 import { ServicesComponent } from "./ts/services.component";
 import { BrandsComponent } from "./ts/brands.component";
 import { AboutUsComponent } from "./ts/about-us.component";
+import { SliderComponent } from './ts/slider.component';
 
 import { routing } from "./ts/app.routing";
 
@@ -20,7 +21,8 @@ import { routing } from "./ts/app.routing";
       CampaignsComponent,
       ServicesComponent,
       BrandsComponent,
-      AboutUsComponent
+      AboutUsComponent,
+      SliderComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,8 +1,19 @@
-<div>
-    <h2>Products</h2>
-    <ul class="products">
-        <li *ngFor="let product of products" [class.selected]="product === selectedProduct">
-            <span class="badge">{{product.id}}</span>{{product.name}}
-        </li>
-    </ul>
-</div>
+<section>
+   <my-slider></my-slider>
+</section>
+<section>
+    <div class="column">WOMAN</div>
+    <div class="column">MAN</div>
+    <div class="column">KIDS</div>
+</section>
+<h2>Products</h2>
+<ul class="products">
+    <li *ngFor="let product of products|slice:0:4" [class.selected]="product === selectedProduct">
+        {{product.name}}
+    </li>
+</ul>
+<ul class="products">
+    <li *ngFor="let product of products|slice:4:8" [class.selected]="product === selectedProduct">
+        {{product.name}}
+    </li>
+</ul>
