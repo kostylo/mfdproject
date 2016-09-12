@@ -8,18 +8,25 @@ import { Products }         from './products';
 import { ProductsService }  from './products.service';
 import { OnInit }           from '@angular/core';
 
+import { Router }           from '@angular/router';
+
 @Component({
     selector: 'my-products',
     templateUrl: 'app/html/products.component.html',
     styleUrls: ['app/css/products.component.css'],
-    providers: [ProductsService]
 })
 
 export class ProductsComponent implements OnInit{
 
+    kidPic = 'images/shoes/kid.jpg';
+    womanPic = 'images/shoes/woman.png';
+    manPic = 'images/shoes/man.png';
+    manNike = 'images/shoes/manNike.jpg';
+
     products: Products[];
-    selectedProduct: Products;
-    constructor(private productsService: ProductsService) {}
+
+    constructor(private productsService: ProductsService,
+                private router: Router) {}
 
     getProducts(): void {
        this.productsService.getProducts().then(products => this.products = products);
@@ -29,7 +36,8 @@ export class ProductsComponent implements OnInit{
         this.getProducts();
     }
 
-    onSelect(product: Products): void {
-        this.selectedProduct = product;
+    gotoDetail(product: Products): void {
+        let link = ['/detail', product.id];
+        this.router.navigate(link);
     }
 }

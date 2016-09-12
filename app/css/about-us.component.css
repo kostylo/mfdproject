@@ -1,0 +1,74 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 100%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+.alert {
+    margin: auto;
+    color: red;
+    padding: 3px;
+}
+
+.top {
+    border: thin solid #212121;
+    padding: 10px;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto auto 0 auto;
+}
+.response {
+    width: 60%;
+    border: thin solid green;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+}
+.panel {
+    width: 60%;
+    margin: 0 auto auto auto;
+    border: thin solid #212121;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+.panel input {
+    margin: 10px;
+}
+
+.ng-valid {
+    border: 1px solid green;
+}
+
+.ng-invalid {
+    border: 1px solid red;
+}
+
+.top, .panel {
+    background-color: #aaaaaa;
+}
+
+.l1 {
+    margin-right: 35px;
+}
+button {
+    width: 35%;
+    padding: 5px;
+    margin-top: 20px;
+    border: thin solid blue;
+    background-color: blue;
+    border-radius: 4px;
+    color: white;
+}
+
+button:disabled:hover {
+    background-color: white;
+}
+
+form {
+    padding:30px 20px;
+}

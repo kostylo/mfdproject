@@ -1,3 +1,31 @@
-<div>
-    <h2>About-Us</h2>
+<div class="newsletter">
+    <div [hidden]="submitted" class="news">
+    <div class="top">
+        <h2>Signup here</h2>
+        <p>Get weekly recipe newsletter</p>
+    </div>
+    <div class="panel">
+        <form (ngSubmit)="register()" #newsletterForm="ngForm" novalidate>
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" [(ngModel)]="model.fullName">
+            </div>
+            <div>
+                <label class="l1" for="email">Email:</label>
+                <input type="email" id="email" name="email" [(ngModel)]="model.email"
+                       pattern="^(([a-zA-Z]|[0-9])|([-]|[_]|[.]))+[@](([a-zA-Z0-9])|([-])){2,63}[.](([a-zA-Z0-9]){2,63})+$"
+                       #email="ngModel" #spyEmail required>
+                <small [hidden]="email.valid || (email.pristine)" class="alert">Email is invalid</small>
+            </div>
+            <div>
+                <label></label>
+            </div>
+            <button type="submit" [disabled]="!newsletterForm.valid">Submit</button>
+        </form>
+    </div>
+    </div>
+    <div [hidden]="!submitted">
+        <h3>You have submitted the following</h3>
+        <div class="response">{{model.fullName}} {{model.email}} {{model.newsType}}</div>
+    </div>
 </div>

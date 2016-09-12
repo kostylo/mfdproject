@@ -8,13 +8,17 @@ import { ServicesComponent } from "./ts/services.component";
 import { BrandsComponent } from "./ts/brands.component";
 import { AboutUsComponent } from "./ts/about-us.component";
 import { SliderComponent } from './ts/slider.component';
+import { ProductDetailComponent } from './ts/product-detail.component';
+import { ProductListComponent } from './ts/product-list.component';
 
 import { routing } from "./ts/app.routing";
+import { ProductsService } from "./ts/products.service";
 
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  imports: [ BrowserModule, routing ],
+  imports: [ BrowserModule, routing, FormsModule],
   declarations: [
       AppComponent,
       ProductsComponent,
@@ -22,8 +26,11 @@ import { routing } from "./ts/app.routing";
       ServicesComponent,
       BrandsComponent,
       AboutUsComponent,
-      SliderComponent
+      SliderComponent,
+      ProductDetailComponent,
+      ProductListComponent
   ],
+  providers: [ ProductsService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

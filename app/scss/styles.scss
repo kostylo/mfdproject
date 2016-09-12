@@ -1,0 +1,415 @@
+@import "normalize";
+@import "font";
+
+$color1: #ffffff;
+$color2: #000000;
+
+@mixin colors ($col, $bgCol) {
+  color: $col;
+  background-color: $bgCol;
+}
+
+html, body {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: #dcdcdc;
+}
+
+section, nav, header {
+  width: 960px;
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+section {
+  .d-1 {
+    width: 100%;
+  }
+
+  .d-2, .d-3 {
+    padding: 10px;
+  }
+
+  .d-4 {
+    padding: 40px 0px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/*----------------HEADER---------------------*/
+header {
+  width: 82%;
+  height: 6em;
+}
+
+header li:hover {
+  background-color: #999999;
+}
+
+.h-1 {
+  flex: 2 2 70%;
+  -webkit-flex: 2 2 70%;
+  -ms-flex: 2 2 70%;
+  margin:auto;
+
+}
+.h-1 label:first-of-type {
+  padding: 0 10px 0 40px ;
+}
+
+.brand {
+  color: #ff0000;
+  font-size: 3em;
+}
+
+.logo {
+  color: $color2;
+  font-size: 3em;
+}
+
+.h-2 {
+  flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  -webkit-flex: 1 1 30%;
+  margin: auto;
+}
+
+.h-2 ul {
+  margin: 0;
+  //padding: 0;
+}
+
+.h-info, .h-menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  justify-content: space-around;
+}
+
+.h-info {
+  padding: 5px;
+  color: $color2;
+  font-size: 0.8em;
+}
+
+.h-menu {
+  padding: 10px 0;
+  border: 1px solid $color1;
+  border-radius: 4px;
+  background-color: $color1;
+}
+
+.h-menu li {
+  margin: auto;
+}
+
+.h-menu li:first-of-type {
+  color: $color2;
+  border-right: thin solid black;
+  padding-right: 20px;
+  margin-right: 7px;
+}
+
+#register button {
+  @include colors($color1,#ff0000);
+  border: thin solid $color2;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+/*-------------------------------------*/
+
+/*----------------NAV---------------------*/
+
+nav {
+  border: thin solid #dcdcdc;
+  background-color: $color1;
+  padding: 10px;
+  width: 80%;
+}
+
+nav {
+
+  a {
+    height: 2em;
+    text-decoration: none;
+    display: inline-block;
+    background-color: $color1;
+    padding-top: 15px;
+    flex: 1 1 0;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    text-align: center;
+  }
+
+  a:first-of-type, a:nth-of-type(2), a:nth-of-type(3), a:nth-of-type(4) {
+    border-right: solid thin #888888;
+  }
+
+  a:hover {
+    @include colors(#039be5,#CFD8DC);
+  }
+
+  a.router-link-active {
+    color: #039be5;
+  }
+
+}
+
+.search {
+  margin: auto
+}
+.search input {
+  border: thin solid #607D8B;
+  border-radius: 10px;
+}
+
+/*-------------------------------------*/
+.column .info, .column .u-menu, .column .f-menu, .column .f2-menu {
+  list-style: none;
+  cursor: pointer;
+}
+
+.column .f-menu li:first-of-type, .f-menu li:nth-of-type(2), .f-menu li:nth-of-type(3),
+.f-menu li:nth-of-type(4), .f-menu li:nth-of-type(5){
+
+  border-right: thin solid $color1;
+}
+
+.column ul:first-of-type {
+  //margin-top: 0;
+  //padding-top: 0;
+}
+
+.column ul li {
+  display: inline;
+}
+
+/*--------------------------------------*/
+
+
+
+.footer .column {
+  justify-content: center;
+  margin: auto auto;
+}
+
+.footer {
+  width: 100%;
+  height: 5em;
+  @include colors($color1,#ff0000);
+}
+
+.footer .column:first-of-type {
+  flex: 1 1 10%;
+  -webkit-flex: 1 1 10%;
+  -ms-flex: 1 1 10%;
+  text-align: center;
+}
+
+.footer .column:nth-of-type(2) {
+  flex: 2 2 0;
+  -webkit-flex: 2 2 0;
+  -ms-flex: 2 2 0;
+}
+
+.footer .column:nth-of-type(3) {
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+}
+
+.column h2 {
+  display: inline;
+  padding: 5px;
+  margin: 5px;
+  height:100%;
+}
+
+.column h2:first-of-type {
+  color:#ff0000;
+}
+
+.column h2:nth-of-type(2) {
+  color: $color2;
+}
+
+.f-menu li {
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+.column {
+  margin: 5px;
+  flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+}
+
+/* flex: <flex-grow> <flex-shrink> <flex-basis>; */
+
+/* Master Styles */
+
+h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+input[text], button {
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;;
+}
+a {
+  color: $color2;
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  @include colors(#eee,#aaa);
+  cursor: auto;
+}
+
+
+/* everywhere else */
+* {
+
+  font-family: SourceSansPro, sans-serif;
+
+
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 1100px) {
+
+
+  .products {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    justify-content: space-around;
+    text-align: center;
+  }
+  .products li {
+
+    margin: auto;
+    max-width: 100%;
+    min-width: 25%;
+
+  }
+
+  .products li img {
+    max-width: 100%;
+    min-width: 25%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  nav {
+    width: 80%;
+    margin:auto;
+    justify-content: center;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+
+  }
+  nav a {
+    border: thin solid #aaaaaa;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+
+  }
+
+  .h-2 {
+    display: none;
+  }
+  .h-1 {
+    max-width: 100%;
+    margin: auto;
+  }
+  .search {
+    display: none;
+  }
+
+  .cat .column {
+
+    width: 80%;
+    margin:auto;
+
+  }
+
+  .cat .column img {
+    max-width: 80%;
+  }
+
+  .footer {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .footer .column {
+    height: 100%;
+  }
+
+  .footer .column:first-of-type, .footer .column:nth-of-type(3) {
+    max-width: 25%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .footer .column:nth-of-type(2) {
+    max-width: 50%;
+    margin: auto;
+    padding: 0;
+  }
+}

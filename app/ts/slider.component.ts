@@ -10,14 +10,11 @@ import { Image } from './image.interface';
     template: `
     <div class="carousel">
         <ul class="slides">
-            
-            <li *ngFor="let image of images">
+            <li *ngFor="let image of images; let index=index">
                 <h2>{{image.title}}</h2>
                 <img src="{{image.url}}" alt="">
             </li>   
-            
         </ul>
-    
     </div>    
 `,
     styleUrls: ['app/css/slider.component.css']
@@ -25,13 +22,15 @@ import { Image } from './image.interface';
 
 export class SliderComponent {
 
+    img = ["images/covered.jpg","images/generation.jpg","images/potter.jpg"];
+
    public images = IMAGES;
 }
 
 const IMAGES:Image[] = [
-    { "title": "We are covered", "url": "images/covered.jpg" },
-    { "title": "Generation Gap", "url": "images/generation.jpg" },
-    { "title": "Potter Me", "url": "images/potter.jpg" },
-    { "title": "Pre-School Kids", "url": "images/preschool.jpg" },
-    { "title": "Young Peter Cech", "url": "images/soccer.jpg" }
+    { "title": "We are covered", "url": "images/shoes/nikeShow.png" },
+    { "title": "Generation Gap", "url": "images/shoes/nikeShow.png" },
+    { "title": "New Product",    "url": "images/shoes/nikeShow.png" },
+    { "title": "New Design",     "url": "images/shoes/nikeShow.png" },
+    { "title": "Buy It Now",     "url": "images/shoes/nikeShow.png" }
 ];

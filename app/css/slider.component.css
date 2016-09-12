@@ -1,6 +1,7 @@
 .carousel{
     overflow:hidden;
     width:100%;
+    height:100%;
 }
 .slides{
     list-style:none;
@@ -8,9 +9,9 @@
     width:500%; /* Number of panes * 100% */
     overflow:hidden; /* Clear floats */
     /* Slide effect Animations*/
-    -moz-animation:carousel 30s infinite;
-    -webkit-animation:carousel 30s infinite;
-    animation:carousel 30s infinite;
+    -moz-animation:carousel 60s infinite;
+    -webkit-animation:carousel 60s infinite;
+    animation:carousel 60s infinite;
 }
 .slides > li{
     position:relative;
@@ -18,6 +19,7 @@
     width: 20%; /* 100 / number of panes */
 }
 .carousel img{
+    height: 100%;
     display:block;
     width:100%;
     max-width:100%;

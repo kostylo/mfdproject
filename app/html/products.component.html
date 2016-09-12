@@ -1,19 +1,43 @@
 <section>
    <my-slider></my-slider>
 </section>
-<section>
-    <div class="column">WOMAN</div>
-    <div class="column">MAN</div>
-    <div class="column">KIDS</div>
+<section class="cat">
+    <div class="column">
+        <p>WOMAN</p>
+        <img src="{{womanPic}}" alt="">
+        <p>TOTAL</p>
+        <p>375 PRODUCTS</p>
+    </div>
+    <div class="column">
+        <p>MAN</p>
+        <img src="{{manPic}}" alt="">
+        <p>TOTAL</p>
+        <p>416 PRODUCTS</p>
+    </div>
+    <div class="column">
+        <p>KIDS</p>
+        <img src="{{kidPic}}" alt="">
+        <p>TOTAL</p>
+        <p>15 PRODUCTS</p>
+    </div>
 </section>
-<h2>Products</h2>
+<section>
+    <label>Special Products</label>
+    <a routerLink="/list" routerLinkActive="active">view all products</a>
+</section>
+<div class="p-1">
 <ul class="products">
-    <li *ngFor="let product of products|slice:0:4" [class.selected]="product === selectedProduct">
-        {{product.name}}
+    <li *ngFor="let product of products|slice:0:4" (click)="gotoDetail(product)">
+        <img src="{{manNike}}" alt="">
+        <p>{{product.name}}</p>
+        <button><span>109.90$</span>GET NOW ></button>
     </li>
 </ul>
 <ul class="products">
-    <li *ngFor="let product of products|slice:4:8" [class.selected]="product === selectedProduct">
-        {{product.name}}
+    <li *ngFor="let product of products|slice:4:8" (click)="gotoDetail(product)">
+        <img src="{{manNike}}" alt="">
+        <p>{{product.name}}</p>
+        <button><span>109.90$</span>GET NOW ></button>
     </li>
 </ul>
+</div>
